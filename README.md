@@ -3,6 +3,8 @@
 Make a pretty polar graph of a Gitcoin user's
 funding preferences during GR15.
 
+<img width="648" alt="ccerv1_gr15" src="https://user-images.githubusercontent.com/42869436/192664981-2399583e-d91f-4d53-be91-58becf80a088.png">
+
 ## Getting started
 1. Clone the repo.
 2. Confirm you have the required libraries (nothing fancy). 
