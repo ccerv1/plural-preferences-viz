@@ -21,7 +21,6 @@ plt.rcParams.update({"font.family": "Tahoma"})
 plt.rcParams["text.color"] = "#1f1f1f"
 plt.rc("axes", unicode_minus=False)
 
-
 # Pathnames
 CONTRIBS_PATH = 'data/contributions.csv'
 TAGS_PATH = 'data/tags.csv'
@@ -36,10 +35,8 @@ COLORS = [
 ] 
 CMAP = LinearSegmentedColormap.from_list("", COLORS, N=256)
 
-
 # Max number of tags to display
 NUM_TAGS = 10 # can't be more than 12
-
 
 # Filter on the MECE-est tags
 FILTER_TAGS = [
@@ -48,7 +45,6 @@ FILTER_TAGS = [
     '*Diversity (DEI)', '*Web3 Social', 'DeFi', 'dGov', 
     '*a16z', '*zkTech', 'Radicle', '*Greater China', 'ETH2.0'
 ]
-
 
 # Special cases
 GRANTS_TO_IGNORE = [
@@ -61,7 +57,7 @@ def make_plot(
     max_tags=NUM_TAGS,       # an int representing the max tags to display
     filter_tags=FILTER_TAGS, # a list of grant tags to filter for
     outdir='img/',           # a directory for exporting images to
-    var='count'              # a column in the data set to use for valuing preferences
+    var='count'              # a column in the data set to use for valueing preferences
     ):
 
     """
@@ -81,7 +77,7 @@ def make_plot(
     
     if not len(df):
         print("Unable to locate user:", handle)
-        return
+        return None
                  
     # load grant tags data
     tags_data = pd.read_csv(TAGS_PATH, index_col=0)
@@ -151,10 +147,13 @@ def make_plot(
         f"{handle} contributed to {num_grants} public goods in GR15\n\n", 
         fontweight='bold'
     )
-
+    
+    # save image
     outpath = f"{outdir}{handle}_gr15.png"
     plt.savefig(outpath)
+    
     print("Successfully added:", outpath)
+    return None
 
     
 
@@ -162,12 +161,13 @@ if __name__ == "__main__":
     
     if len(sys.argv) == 2:
         handle = sys.argv[1]
-
         make_plot(handle)
+        
     elif len(sys.argv) == 3:
         handle = sys.argv[1]
         maxtags = int(sys.argv[2])
         make_plot(handle, max_tags=maxtags)
+        
     else:
         print("Enter a Gitcoin handle followed by an optional number of tags to display (max 12")
         print("Example: python funding_graph.py ccerv1 11")
