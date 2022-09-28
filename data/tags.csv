@@ -1,0 +1,64 @@
+,tag_id,tag_name
+62,-1,Unknown
+12,1,ETH2.0
+0,2,Community
+1,3,Education
+9,4,Security
+4,5,DeFi
+6,6,Scalability
+2,7,Blog
+27,8,ETH1.x
+16,9,Wallets
+28,10,COVID19 research
+15,11,COVID19 response
+20,12,Twitter
+29,13,Reddit
+22,14,Notes
+10,15,DevEx
+3,16,Usability
+18,17,L2
+5,18,Mining
+24,19,Identity
+23,20,Cryptography
+8,21,Gaming
+17,22,dStorage
+21,23,Launchpad
+14,24,Social Token
+13,25,dGov
+11,26,Infrastructure
+19,27,NFTs
+30,28,IoT
+7,29,DAOs
+31,30,Uniswap
+38,31,GitcoinDAO
+26,33,*Polygon
+25,34,dApps
+41,35,Forefront
+36,36,*zkTech
+40,37,Synthetix
+34,39,*Climate Solutions
+37,40,*Crypto Advocacy
+35,41,Longevity
+39,42,Algorand
+54,43,Radicle
+51,44,OlympusDAO
+32,45,NFT Ecosystem
+42,46,*Open Gaming
+46,47,*ENS
+33,48,Support for Ukraine
+44,49,*ETH Infra
+55,50,Fantom
+43,51,Protocol Labs (IPFS / Filecoin)
+58,52,Subgraph Scholarships
+47,53,*Web3 Social
+49,54,Celo
+60,55,*Lootverse
+45,56,*AURORA
+59,57,*Unlock Protocol
+48,58,*Diversity (DEI)
+61,60,Oakland
+50,61,*DeSci
+53,62,*Main Round
+57,63,*Greater China
+56,64,*Forta
+52,65,*a16z
